@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/bgapp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="36dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Masukkan Username"
+        android:background="@drawable/border"
+        />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Masukkan Password"
+        android:layout_marginBottom="30dp"
+        android:inputType="textPassword"
+        android:background="@drawable/border"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_gravity="center"
+        android:background="@drawable/bgbutton"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/bgapp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/bgapp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detais Movie"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/gambar2"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fight Club"
+        android:textSize="20dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Director : David Fincher  |  ★ 8,8/10"
+        android:textColor="@color/grey"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Storyline"
+        android:textSize="20dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:text="Film ini berkisah tentang pria tak bernama yang menjadi narator pada film ini (Edward Norton). Ia seorang pekerja pada sebuah perusahan mobil yang menderita insomnia akibat tekanan pekerjaan, sehingga ia memutuskan untuk mengikuti support group. a merasa sembuh setelah mengikuti support group penderita kanker testis."
+        android:textSize="18dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Ticket"
+        android:layout_gravity="center"
+        android:background="@drawable/bgbutton"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</LinearLayout>
+</ScrollView>
