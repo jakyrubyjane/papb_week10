@@ -3,9 +3,13 @@ package com.example.ticketapp
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.ticketapp.databinding.ActivityHomepageBinding
 
 class Homepage : AppCompatActivity() {
+    companion object {
+        var usernames = ""
+    }
 
     private lateinit var binding: ActivityHomepageBinding
 
@@ -15,19 +19,26 @@ class Homepage : AppCompatActivity() {
         binding = ActivityHomepageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = intent.getStringExtra("USERNAME")
+        usernames = intent.getStringExtra("USERNAME").toString()
 
-        if (username != null) {
-            binding.welcome.text = "$username!"
+        with(binding){
+
+            bottomNav.setOnItemSelectedListener{
+                when(it.itemId){
+                    R.id.home -> replaceFragment(HomeFragment())
+                    R.id.profile -> replaceFragment(ProfileFragment())
+
+                    else->{}
+                }
+                true
+            }
         }
+    }
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame, fragment)
+        fragmentTransaction.commit()
 
-        val imageView = binding.imageView3
-
-        imageView.setOnClickListener {
-            val intent = Intent(this, film1::class.java)
-            startActivity(intent)
-
-
-        }
     }
 }
